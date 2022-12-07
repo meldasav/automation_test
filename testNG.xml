@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Car Test">
+    <test verbose="2" preserve-order="true" name="Car Validation">
+        <groups>
+            <run>
+                <include name="Car Validation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="scripts.Car"/>
+
+        </classes>
+
+    </test>
+
+</suite>
