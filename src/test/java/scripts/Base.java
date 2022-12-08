@@ -27,6 +27,7 @@ public class Base {
 
     HiddenElementsPage hiddenElementsPage;
 
+    TravelHomePage travelHomePage;
     AlertPage alertPage;
     SoftAssert softAssert;
 
@@ -44,6 +45,7 @@ public class Base {
         firstProductPage = new FirstProductPage();
         accordionPage = new AccordionPage();
         hiddenElementsPage = new HiddenElementsPage();
+        travelHomePage =new TravelHomePage();
     }
 
     @AfterMethod
