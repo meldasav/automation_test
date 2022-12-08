@@ -1,6 +1,8 @@
 package scripts;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.AlertHandler;
@@ -108,5 +110,29 @@ public class Car extends Base {
         homePage.hiddenElement.click();
         Assert.assertFalse(hiddenElementsPage.hiddenP.isDisplayed());
         Assert.assertTrue(hiddenElementsPage.visibleText.isDisplayed());
+    }
+
+    @Test
+    public void testIframe(){
+       driver.get("https://www.automationtesting.co.uk/index.html");
+       homePage.iFrame.click();
+       driver.switchTo().frame(iframePage.iframe1);
+       iframePage.iframeMenuBar.click();
+       driver.switchTo().parentFrame();
+       driver.switchTo().frame(1);
+       iframePage.video.click();
+
+       Actions actions = new Actions(driver);
+       actions.sendKeys(Keys.PAGE_DOWN).perform();
+       Waiter.pause(19);
+
+
+
+
+
+
+
+
+
     }
 }

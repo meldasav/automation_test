@@ -1,6 +1,5 @@
 package scripts;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utilities.Waiter;
 
@@ -11,7 +10,7 @@ public class TravelTest extends Base {
         Waiter.waitUntilTitleIs(driver, 8, "easyJet | Cheap flights ✈️ Book low-cost flight tickets 2023");
         travelHomePage.cookiePanel.click();
 
-        for (int i = 0; i < travelHomePage.inputBoxes.size(); i++) {
+        for (int i = 0; i <travelHomePage.inputBoxes.size(); i++) {
             if (travelHomePage.inputBoxes.get(i).toString().charAt(i) ==
                 travelHomePage.inputBoxes.get(i).toString().charAt(0)) {
                 travelHomePage.inputBoxes.get(i).clear();

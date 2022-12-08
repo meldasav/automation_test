@@ -27,6 +27,8 @@ public class Base {
 
     HiddenElementsPage hiddenElementsPage;
 
+    IframePage iframePage;
+
     TravelHomePage travelHomePage;
     AlertPage alertPage;
     SoftAssert softAssert;
@@ -46,6 +48,7 @@ public class Base {
         accordionPage = new AccordionPage();
         hiddenElementsPage = new HiddenElementsPage();
         travelHomePage =new TravelHomePage();
+        iframePage = new IframePage();
     }
 
     @AfterMethod
