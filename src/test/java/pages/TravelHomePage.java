@@ -22,10 +22,11 @@ public class TravelHomePage extends BasePage {
 
     public void clickDropDow(String text) {
         for (WebElement element : londonDropDown) {
-            if (element.getText().equals(text)) {
+            if (element.getText().equalsIgnoreCase(text)) {
                 element.click();
                 break;
             }
         }
     }
+
 }
