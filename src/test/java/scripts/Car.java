@@ -9,6 +9,7 @@ import utilities.AlertHandler;
 import utilities.DropDownHandler;
 import utilities.Waiter;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -112,27 +113,33 @@ public class Car extends Base {
         Assert.assertTrue(hiddenElementsPage.visibleText.isDisplayed());
     }
 
-    @Test
-    public void testIframe(){
-       driver.get("https://www.automationtesting.co.uk/index.html");
-       homePage.iFrame.click();
-       driver.switchTo().frame(iframePage.iframe1);
-       iframePage.iframeMenuBar.click();
-       driver.switchTo().parentFrame();
-       driver.switchTo().frame(1);
-       iframePage.video.click();
+    @Test(priority = 2)
+    public void testIframe() {
+        driver.get("https://www.automationtesting.co.uk/index.html");
+        homePage.iFrame.click();
+        driver.switchTo().frame(iframePage.iframe1);
+        iframePage.iframeMenuBar.click();
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(1);
+        iframePage.video.click();
 
-       Actions actions = new Actions(driver);
-       actions.sendKeys(Keys.PAGE_DOWN).perform();
-       Waiter.pause(19);
-
-
-
-
-
-
-
-
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Waiter.pause(19);
+    }
+    @Test(priority = 3)
+    public void testBrowserTab() {
+        driver.get("https://www.automationtesting.co.uk/index.html");
+        homePage.browserTab.click();
+        for (int i = 0; i < 3; i++) {
+            browserTabPage.openTabBox.click();
+        }
+        ArrayList<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
+        for (String item : windowHandles) {
+            driver.switchTo().window(item);
+        }
+        driver.switchTo().window(windowHandles.get(0));
+        browserTabPage.openTabBox.click();
 
     }
 }

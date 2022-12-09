@@ -43,4 +43,7 @@ public class HomePage {
 
     @FindBy(css = "a[href='iframes.html']")
     public WebElement iFrame;
+
+    @FindBy(css = "a[href='browserTabs.html']")
+    public WebElement browserTab;
 }

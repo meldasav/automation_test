@@ -3,8 +3,13 @@
 <suite name="Regression">
     <test name="All Functionalities">
         <classes>
-            <class name="scripts.Car">
+            <class
+                    name="scripts.Car">
             </class>
+            <class
+                    name="scripts.TravelTest">
+            </class>
+
         </classes>
 
     </test>

@@ -29,6 +29,8 @@ public class Base {
 
     IframePage iframePage;
 
+    BrowserTabPage browserTabPage;
+
     TravelHomePage travelHomePage;
     AlertPage alertPage;
     SoftAssert softAssert;
@@ -49,6 +51,7 @@ public class Base {
         hiddenElementsPage = new HiddenElementsPage();
         travelHomePage =new TravelHomePage();
         iframePage = new IframePage();
+        browserTabPage  =new BrowserTabPage();
     }
 
     @AfterMethod

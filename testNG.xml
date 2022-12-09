@@ -9,6 +9,7 @@
         </groups>
         <classes>
             <class name="scripts.Car"/>
+            <class name="scripts.TravelTest"/>
 
         </classes>
 

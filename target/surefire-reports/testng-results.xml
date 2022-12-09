@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="11109" started-at="2022-12-07T21:08:05 CST" finished-at="2022-12-07T21:08:16 CST">
+  <suite name="Command line suite" duration-ms="10570" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:16:04 CST">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="11109" started-at="2022-12-07T21:08:05 CST" finished-at="2022-12-07T21:08:16 CST">
+    <test name="Command line test" duration-ms="10570" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:16:04 CST">
       <class name="scripts.TravelTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="setup" is-config="true" duration-ms="1741" started-at="2022-12-07T21:08:05 CST" finished-at="2022-12-07T21:08:07 CST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="setup" is-config="true" duration-ms="1719" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:15:55 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testTravelPage()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="testTravelPage" duration-ms="6159" started-at="2022-12-07T21:08:07 CST" finished-at="2022-12-07T21:08:13 CST">
+        <test-method status="PASS" signature="testTravelPage()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="testTravelPage" duration-ms="5625" started-at="2022-12-07T23:15:55 CST" finished-at="2022-12-07T23:16:01 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTravelPage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="teardown" is-config="true" duration-ms="3187" started-at="2022-12-07T21:08:13 CST" finished-at="2022-12-07T21:08:16 CST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="teardown" is-config="true" duration-ms="3202" started-at="2022-12-07T23:16:01 CST" finished-at="2022-12-07T23:16:04 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
