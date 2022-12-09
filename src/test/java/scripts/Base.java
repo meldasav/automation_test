@@ -1,5 +1,6 @@
 package scripts;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -32,6 +33,7 @@ public class Base {
     BrowserTabPage browserTabPage;
 
     TravelHomePage travelHomePage;
+
     AlertPage alertPage;
     SoftAssert softAssert;
 
@@ -52,6 +54,8 @@ public class Base {
         travelHomePage =new TravelHomePage();
         iframePage = new IframePage();
         browserTabPage  =new BrowserTabPage();
+
+
     }
 
     @AfterMethod

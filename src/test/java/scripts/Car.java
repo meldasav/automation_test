@@ -1,5 +1,7 @@
 package scripts;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -127,6 +129,7 @@ public class Car extends Base {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Waiter.pause(19);
     }
+
     @Test(priority = 3)
     public void testBrowserTab() {
         driver.get("https://www.automationtesting.co.uk/index.html");
@@ -141,5 +144,31 @@ public class Car extends Base {
         driver.switchTo().window(windowHandles.get(0));
         browserTabPage.openTabBox.click();
 
+    }
+
+    @Test(priority = 4)
+    public void javaExecuter() {
+        driver.get("https://www.automationtesting.co.uk/index.html");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,200)");
+    }
+
+    @Test(priority = 5)
+    public void javaScript() {
+        driver.get("https://www.automationtesting.co.uk/index.html");
+        homePage.contactUsFormTest.click();
+        contactUsPage.firstNameInputBox.sendKeys("Michael");
+        contactUsPage.lastNameInputBox.sendKeys("Page");
+        contactUsPage.emailInputBox.sendKeys("MichaelPage@gmail.com");
+        contactUsPage.textInputBox.sendKeys("urgent");
+
+        WebElement submit = driver.findElement(By.cssSelector("[type='submit']"));
+        WebElement reset = driver.findElement(By.cssSelector("[type='reset']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click(),arguments[1].click()", reset, submit);
+
+        WebElement errorMessage = driver.findElement(By.cssSelector("body"));
+        Assert.assertEquals(errorMessage.getText(),"Error: all fields are required\n" +
+                "Error: Invalid email address");
     }
 }

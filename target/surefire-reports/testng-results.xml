@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="10570" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:16:04 CST">
+  <suite name="Regression" duration-ms="65773" started-at="2022-12-08T18:56:36 CST" finished-at="2022-12-08T18:57:42 CST">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="10570" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:16:04 CST">
-      <class name="scripts.TravelTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="setup" is-config="true" duration-ms="1719" started-at="2022-12-07T23:15:53 CST" finished-at="2022-12-07T23:15:55 CST">
+    <test name="All Functionalities" duration-ms="65773" started-at="2022-12-08T18:56:36 CST" finished-at="2022-12-08T18:57:42 CST">
+      <class name="scripts.Car">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.Car@4d3167f4]" name="setup" is-config="true" duration-ms="2062" started-at="2022-12-08T18:56:36 CST" finished-at="2022-12-08T18:56:38 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testTravelPage()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="testTravelPage" duration-ms="5625" started-at="2022-12-07T23:15:55 CST" finished-at="2022-12-07T23:16:01 CST">
+        <test-method status="PASS" signature="practice()[pri:0, instance:scripts.Car@4d3167f4]" name="practice" duration-ms="16917" started-at="2022-12-08T18:56:38 CST" finished-at="2022-12-08T18:56:55 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- practice -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.Car@4d3167f4]" name="teardown" is-config="true" duration-ms="3158" started-at="2022-12-08T18:56:55 CST" finished-at="2022-12-08T18:56:58 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.Car@4d3167f4]" name="setup" is-config="true" duration-ms="1563" started-at="2022-12-08T18:56:58 CST" finished-at="2022-12-08T18:57:00 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testIframe()[pri:2, instance:scripts.Car@4d3167f4]" name="testIframe" duration-ms="21839" started-at="2022-12-08T18:57:00 CST" finished-at="2022-12-08T18:57:22 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIframe -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.Car@4d3167f4]" name="teardown" is-config="true" duration-ms="3185" started-at="2022-12-08T18:57:22 CST" finished-at="2022-12-08T18:57:25 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.Car@4d3167f4]" name="setup" is-config="true" duration-ms="1638" started-at="2022-12-08T18:57:25 CST" finished-at="2022-12-08T18:57:27 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testBrowserTab()[pri:3, instance:scripts.Car@4d3167f4]" name="testBrowserTab" duration-ms="2003" started-at="2022-12-08T18:57:27 CST" finished-at="2022-12-08T18:57:29 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowserTab -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.Car@4d3167f4]" name="teardown" is-config="true" duration-ms="3267" started-at="2022-12-08T18:57:29 CST" finished-at="2022-12-08T18:57:32 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts.Car -->
+      <class name="scripts.TravelTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.TravelTest@ed9d034]" name="setup" is-config="true" duration-ms="1422" started-at="2022-12-08T18:57:32 CST" finished-at="2022-12-08T18:57:33 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testTravelPage()[pri:0, instance:scripts.TravelTest@ed9d034]" name="testTravelPage" duration-ms="5119" started-at="2022-12-08T18:57:33 CST" finished-at="2022-12-08T18:57:38 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTravelPage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.TravelTest@56ac3a89]" name="teardown" is-config="true" duration-ms="3202" started-at="2022-12-07T23:16:01 CST" finished-at="2022-12-07T23:16:04 CST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.TravelTest@ed9d034]" name="teardown" is-config="true" duration-ms="3568" started-at="2022-12-08T18:57:38 CST" finished-at="2022-12-08T18:57:42 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- scripts.TravelTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- All Functionalities -->
+  </suite> <!-- Regression -->
 </testng-results>
