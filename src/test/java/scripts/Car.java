@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utilities.AlertHandler;
 import utilities.DropDownHandler;
@@ -16,10 +17,7 @@ import utilities.Waiter;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class Car extends Base {
 
@@ -216,7 +214,7 @@ public class Car extends Base {
         takescreenShot(driver);
     }
 
-    @Test(priority = 9,groups = "Signln")
+    @Test(priority = 9, groups = "Signln")
     public void signIn() {
         driver.get("http://teststore.automationtesting.co.uk/");
         testStorePage.signInButton.click();
@@ -225,4 +223,21 @@ public class Car extends Base {
         testStorePage.signInBtn.click();
         testStoreContactUsPage.signOutBtn.click();
     }
+    @DataProvider
+    public Object[][] getData() {
+        return new Object[][]{{"melsel@gmail.com", "12345"}, {"mese@gmail.com", "123456"}};
+
+    }
+    @Test(priority = 10, dataProvider = "getData")
+    public void testData(String email , String password) {
+
+        driver.get("http://teststore.automationtesting.co.uk/");
+        testStorePage.signInButton.click();
+        testStorePage.emailInputBox.sendKeys(email);
+        testStorePage.passwordInputBox.sendKeys(password);
+        testStorePage.signInBtn.click();
+        testStoreContactUsPage.signOutBtn.click();
+    }
+
 }
+

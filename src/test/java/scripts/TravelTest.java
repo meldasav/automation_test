@@ -1,9 +1,13 @@
 package scripts;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.Waiter;
+@Listeners(scripts._01_ITestListener.class)
 
 public class TravelTest extends Base {
+    //enable = false use for skipping the test
+    //(enable = false)
     @Test
     public void testTravelPage() {
         driver.get("https://www.easyjet.com/en");
