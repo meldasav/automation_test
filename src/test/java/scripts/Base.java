@@ -36,6 +36,7 @@ public class Base {
 
     TravelHomePage travelHomePage;
 
+    TestStoreContactUsPage testStoreContactUsPage;
     AlertPage alertPage;
     SoftAssert softAssert;
 
@@ -56,8 +57,10 @@ public class Base {
         travelHomePage =new TravelHomePage();
         iframePage = new IframePage();
         browserTabPage  =new BrowserTabPage();
+        testStoreContactUsPage = new TestStoreContactUsPage();
 
     }
+
     @AfterMethod
     public void teardown() {
         softAssert.assertAll();

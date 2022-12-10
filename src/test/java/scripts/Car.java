@@ -23,7 +23,7 @@ import java.util.Set;
 
 public class Car extends Base {
 
-    @Test
+    @Test(priority = 1)
     public void practice() {
         driver.get("https://www.automationtesting.co.uk/index.html");
         homePage.loader.click();
@@ -214,5 +214,15 @@ public class Car extends Base {
         driver.get("https://www.automationtesting.co.uk/index.html");
         homePage.contactUsFormTest.click();
         takescreenShot(driver);
+    }
+
+    @Test(priority = 9,groups = "Signln")
+    public void signIn() {
+        driver.get("http://teststore.automationtesting.co.uk/");
+        testStorePage.signInButton.click();
+        testStorePage.emailInputBox.sendKeys("melsel@gmail.com");
+        testStorePage.passwordInputBox.sendKeys("12345");
+        testStorePage.signInBtn.click();
+        testStoreContactUsPage.signOutBtn.click();
     }
 }

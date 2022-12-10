@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Car Test">
-    <test verbose="2" preserve-order="true" name="Car Validation">
-        <groups>
-            <run>
-                <include name="Car Validation"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="scripts.Car"/>
-            <class name="scripts.TravelTest"/>
-
-        </classes>
-
-    </test>
-
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/meldasav/IdeaProjects/Intro/src/test/java/scripts">
+    <classes>
+        <class name="scripts.Car">
+        <methods>
+            <include name="practice"/>
+            <include name="testIframe"/>
+            <include name="testBrowserTab"/>
+            <include name="javaExecuter"/>
+            <include name="javaScript"/>
+            <include name="chromeOptions"/>
+            <include name="desireCapabilities"/>
+            <include name="screenShot"/>
+         </methods>
+    </class>
+        <class name="scripts.TravelTest">
+            <methods>
+                <exclude name="testTravelPage"/>
+            </methods>
+        </class>
+    </classes>
+</test>
 </suite>

@@ -13,4 +13,16 @@ public class TestStorePage {
 
     @FindBy(css = "img[alt='Hummingbird printed t-shirt']")
     public WebElement firstProduct;
+
+    @FindBy(css = "div[class='user-info']>a")
+    public WebElement signInButton;
+
+    @FindBy(css ="section input[name='email']")
+    public WebElement emailInputBox;
+
+    @FindBy(css = "input[name='password']")
+    public WebElement passwordInputBox;
+
+    @FindBy(id = "submit-login")
+    public WebElement signInBtn;
 }
