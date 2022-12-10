@@ -1,17 +1,23 @@
 package scripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.AlertHandler;
 import utilities.DropDownHandler;
 import utilities.Waiter;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -168,7 +174,45 @@ public class Car extends Base {
         js.executeScript("arguments[0].click(),arguments[1].click()", reset, submit);
 
         WebElement errorMessage = driver.findElement(By.cssSelector("body"));
-        Assert.assertEquals(errorMessage.getText(),"Error: all fields are required\n" +
+        Assert.assertEquals(errorMessage.getText(), "Error: all fields are required\n" +
                 "Error: Invalid email address");
+    }
+
+    @Test(priority = 6)
+    public void chromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        options.addArguments("--incognito");
+        WebDriver driver1 = new ChromeDriver(options);
+        driver1.get("https://www.automationtesting.co.uk/index.html");
+    }
+
+    @Test(priority = 7)
+    public void desireCapabilities() {
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        ChromeOptions options = new ChromeOptions();
+        options.merge(cap);
+        WebDriver driver1 = new ChromeDriver(options);
+        driver1.get("https://expired.badssl.com/");
+    }
+
+
+    public static void takescreenShot(WebDriver webDriver) throws IOException {
+        File srcFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
+        File destFile = new File("/Users/meldasav/IdeaProjects/Intro/screenshots/" + timestamp() + ".png");
+        FileUtils.copyFile(srcFile, destFile);
+    }
+
+    public static String timestamp() {
+        return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
+    }
+
+    @Test(priority = 8)
+    public void screenShot() throws IOException {
+        driver.get("https://www.automationtesting.co.uk/index.html");
+        homePage.contactUsFormTest.click();
+        takescreenShot(driver);
     }
 }

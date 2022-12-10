@@ -1,6 +1,8 @@
 package scripts;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -55,11 +57,8 @@ public class Base {
         iframePage = new IframePage();
         browserTabPage  =new BrowserTabPage();
 
-
     }
-
     @AfterMethod
-
     public void teardown() {
         softAssert.assertAll();
         Driver.quitDriver();
