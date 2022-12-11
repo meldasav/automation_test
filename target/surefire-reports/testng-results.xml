@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="9" total="10" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="scripts.Car" duration-ms="7402" started-at="2022-12-10T19:42:28 CST" finished-at="2022-12-10T19:42:36 CST">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="7402" started-at="2022-12-10T19:42:28 CST" finished-at="2022-12-10T19:42:36 CST">
+      <class name="scripts.Car">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts.Car@6d7b4f4c]" name="setup" is-config="true" duration-ms="1724" started-at="2022-12-10T19:42:29 CST" finished-at="2022-12-10T19:42:30 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testBrowserTab()[pri:3, instance:scripts.Car@6d7b4f4c]" name="testBrowserTab" duration-ms="2541" started-at="2022-12-10T19:42:30 CST" finished-at="2022-12-10T19:42:33 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowserTab -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts.Car@6d7b4f4c]" name="teardown" is-config="true" duration-ms="3112" started-at="2022-12-10T19:42:33 CST" finished-at="2022-12-10T19:42:36 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts.Car -->
+    </test> <!-- Command line test -->
+  </suite> <!-- scripts.Car -->
+</testng-results>

@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.AlertHandler;
 import utilities.DropDownHandler;
@@ -19,10 +20,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+@Listeners(scripts._01_ITestListener.class)
 public class Car extends Base {
 
     @Test(priority = 1)
     public void practice() {
+        ExtentManager.log("Test");
         driver.get("https://www.automationtesting.co.uk/index.html");
         homePage.loader.click();
         driver.navigate().back();
@@ -30,8 +33,10 @@ public class Car extends Base {
         homePage.buttonThreeButton.click();
         AlertHandler.acceptAlert(driver);
         driver.navigate().back();
+        ExtentManager.pass("Reached the HomePage");
         homePage.contactUsFormTest.click();
         contactUsPage.firstNameInputBox.sendKeys("Michael");
+        ExtentManager.pass("FirstName successfully added");
         contactUsPage.lastNameInputBox.sendKeys("Page");
         contactUsPage.emailInputBox.sendKeys("MichaelPage@gmail.com");
         contactUsPage.textInputBox.sendKeys("urgent");
